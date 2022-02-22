@@ -1,0 +1,114 @@
+body
+{
+  width: 100%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.product,.discount,.add
+{
+  border: 1px solid #c9c9c9;
+  background-color: #fff;
+  border-radius: 25px;
+  margin: 2px 2px;
+  padding: 1px 15px 5px 5px;
+  position: relative;
+  color: #2b2a2a;
+  display: inline-block;
+  box-shadow: -1px 1px #c9c9c959 ;
+  
+}
+.discount
+{
+  background-color: #aa9f0146;/*#ffef0b;*/
+  font-size: 11pt;
+  color: #6d8d74;
+  text-shadow: -1px 1px #ffffff;
+  border: 1px inset #6d8d74;
+  padding: 1px 5px 1px 5px;
+}
+.discount:first-of-type
+{
+  margin-left: 40px;
+}
+.new:hover
+{
+  background-color: #aaf861;
+  opacity: 1;
+  cursor: pointer;
+}
+.price
+{
+  color: #dd5b5b;
+}
+#cart
+{
+  z-index: 1;
+}
+#addToCart
+{
+border: 1px solid #c9c9c9;
+background-color: #c9c9c918;
+position: absolute;
+width: max-content/2;
+margin: 60px 5px auto auto;
+display: none;
+z-index: 3;
+}
+.close
+{
+  color: #2b2a2a;
+  position: absolute;
+  right: 5px;
+  top: 10%;
+  transform: translate(0%,0%);
+  opacity: 0.5;
+  cursor: pointer;
+}
+.close:hover
+{
+  opacity: 1;
+}
+.close:active .close:has(.product)
+{
+  display: none;
+}
+.window
+{
+  right: 5px;
+  top:5%;
+}
+p
+{
+  border-bottom: 1px solid #dedede;
+  padding: 15px 15px 15px 15px;
+  background-color: #f5f5f538;
+  margin: 0;
+}
+.add
+{
+  z-index: 4;
+  padding: 3px 15px;
+  border-radius: 25px;
+  margin-left: 20px;
+  background-color: #8acf52;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: -1px 1px #315e39 ;
+  border: -1px 1px groove #315e39 ;
+  text-align: center;
+}
+.totalPrice
+{
+  color: #ff0000;
+}
+.discountAmount
+{
+  color: #ffa600;
+}
+.ADPrice
+{
+  color: #0ea50e;
+}
+small
+{
+  font-size: 9pt;
+}

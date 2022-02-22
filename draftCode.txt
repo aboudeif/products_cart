@@ -1,0 +1,141 @@
+
+# Ajax
+<script>
+    var updateCart = new XMLHttpRequest();
+    updateCart.onreadystatechange = function() {
+      console.log(this.status);
+      if(this.readyState === 4 && this.status === 200){
+      var itemss = JSON.parse(this.responseText),myItem = '';
+      for(var i = 0; i < itemss.length; i++)
+      console.log(itemss[i]);
+        }
+      };
+    
+    updateCart.open('GET','index.php','true');
+    updateCart.send();
+  </script>
+
+  # PHP get js array
+      /*function getThem(){
+      $Cart = array();
+      $items = array();
+      $items = "<script>getAllProducts();</script>";
+      echo $items;
+      foreach($items as $item){
+        echo $item;
+        array_push($Cart,$item);
+      }
+      return $Cart;
+    }*/
+    
+    echo "<script>console.log('l');</script>";
+    echo $cart[0];
+
+     onload='loading();getAllProducts();'
+
+#back
+{
+  position: absolute;
+  display: none;
+  width: 400px;
+  z-index: 2;
+}
+
+# localstorage store and get
+
+function loading(){
+  if(localStorage.getItem('cart'))
+    getAllProducts();
+    
+  else localStorage.setItem('cart',0);
+}
+
+function addProduct(evt){
+  var product = evt.currentTarget.innerHTML.split('<')[0];
+  storeProduct(product);
+  refresh();
+}
+
+function storeProducts(name){
+  var cart = localStorage.getItem('cart');
+  localStorage.setItem('cart' + ++cart,name);
+}
+function getAllProducts(){
+  var theCart = [];
+  for(var x = 0; x < localStorage.length; x++){
+    if(localStorage.key(x).slice(0,4) == 'cart' && localStorage.key(x)!= 'cart' )
+      theCart.push(localStorage.getItem(localStorage.key(x)));
+  }
+  return theCart;
+}
+
+trush
+--------------
+ //echo "hello ". $_POST['tart'];
+    //$cart = array(1,2);
+    //
+    
+    //foreach($cart as $item)
+    //  echo $item;
+   // else
+      //echo "no";
+
+ 
+    //if($cart = null)
+     // $cart = array(1,2);
+    #$cart = $_GET[cart];
+
+ /*function reloadCart($_GET[cart]){
+      $temp = array();
+      for($i = 1; i< $_GET[cart].length; i++)
+        $item = tirm($_GET[cart],",")[i];
+        array_push($temp,$item);
+      echo $temp;
+      return $temp;
+    }*/
+
+------------------------------------
+
+  
+      
+      /*document.getElementById("cart").innerText =*/ 
+      //console.log(JSON.parse(this.responseText));
+       /*= datab &  "<span class='add new' onClick='showProducts();'>+</span>";
+      //json_decode(this.responseText)[cart];*/
+
+      //Convert response text to js object
+     /* var myJsObject = JSON.parse(this.responseText);
+      var myText = '';*/
+
+      //for (var i = 0; i < myJsObject.length; i++)
+      //  console.log(myJsObject['cart']);
+      //var my_var = "<?php echo 'hello '. $_POST['tart']; ?>";
+
+     /*for(var i = 1; i< tirm(text,",").length; i++){
+    data.append(tirm(text,",")[i]);
+    console.log(tirm(text,",")[i]);
+  }*/
+  //var data2 = new FormData();
+  //data2.append('tart',document.getElementById('hiddenText').value);
+  //var finalText = 'tart=' + data;
+  
+   //xhttp.send();
+
+  /*$.ajax({
+   type: "POST",
+   data: {cart:cart},
+   url: "index.php",
+   success: function(msg){
+     $('.answer').html(msg);
+   }
+  });
+  consol.log('done!');*/
+  
+  /*temp = [];
+  for($i = 1; i< $_GET[cart].length; i++)
+    $item = tirm($_GET[cart],",")[i];
+    array_push($temp,$item);
+  echo temp;
+  return $temp;*/
+   
+    
